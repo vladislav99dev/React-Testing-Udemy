@@ -26,7 +26,7 @@ test("it calls onUserAdd when the form is submitted", async () => {
 
   await user.click(nameInput);
   await user.keyboard("jane");
-
+ 
   const button = screen.getByRole("button");
   await user.click(button);
 
