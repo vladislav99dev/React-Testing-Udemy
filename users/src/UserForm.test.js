@@ -30,6 +30,6 @@ test("it calls onUserAdd when the form is submitted", async () => {
   const button = screen.getByRole("button");
   await user.click(button);
 
-  expect(mock).toHaveBeenCalled(); 
+  expect(mock).toHaveBeenCalled();  
   expect(mock).toHaveBeenCalledWith({ name: "jane", email: "jane@jane.com" });
 });
