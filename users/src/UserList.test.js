@@ -2,7 +2,7 @@ import { screen, render, within } from "@testing-library/react";
 import UserList from "./UserList";
 
 test("new test", () => {
-  render(
+  const { container } = render(
     <UserList
       users={[
         { name: "Vladislav", email: "Dorovski" },
@@ -11,7 +11,7 @@ test("new test", () => {
     />
   );
 
-  const rows = within(screen.getByTestId("users")).getAllByRole("row");
+  const rows = container.querySelectorAll("tbody tr");
 
   expect(rows).toHaveLength(2);
 });
