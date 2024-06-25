@@ -1,15 +1,22 @@
 import { screen, render, within } from "@testing-library/react";
 import UserList from "./UserList";
 
+function renderComponent() {
+  const users = [
+    { name: "Vladislav", email: "Dorovski" },
+    { name: "Vladislavc", email: "DorovskiI" },
+  ];
+  
+  const { container } = render(<UserList users={users} />);
+
+  return {
+    users,
+    container,
+  };
+}
+
 test("test users rendering", () => {
-  const { container } = render(
-    <UserList
-      users={[
-        { name: "Vladislav", email: "Dorovski" },
-        { name: "Vladislavc", email: "Dorovski" },
-      ]}
-    />
-  );
+  const { container } = renderComponent();
 
   const rows = container.querySelectorAll("tbody tr");
 
@@ -17,11 +24,7 @@ test("test users rendering", () => {
 });
 
 test("render the email and name of each user", () => {
-  const users = [
-    { name: "Vladislav", email: "Dorovski" },
-    { name: "Vladislavc", email: "DorovskiI" },
-  ];
-  render(<UserList users={users} />);
+  const { users } = renderComponent();
 
   for (const user of users) {
     const name = screen.getByRole("cell", { name: user.name });
