@@ -1,6 +1,6 @@
 import React from "react";
 
-const Exercise2 = () => {
+const QueryFnBehaiviors = () => {
   return (
     <ul>
       <li>Red</li>
@@ -10,4 +10,4 @@ const Exercise2 = () => {
   );
 };
 
-export default Exercise2;
+export default QueryFnBehaiviors;

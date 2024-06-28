@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react"
-import Exercise from "./Exercise"
+import ElementRoles from "./ElementRoles"
 
 
 test("can find elements by role", () => {
-    render(<Exercise />)
+    render(<ElementRoles />)
 
     const roles = [
         'link',

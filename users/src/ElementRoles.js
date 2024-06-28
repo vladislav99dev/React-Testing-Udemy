@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Exercise = () => {
+const ElementRoles = () => {
     return (
         <div>
             <a href="/">Link</a>
@@ -19,4 +19,4 @@ const Exercise = () => {
     )
 }
 
-export default Exercise
+export default ElementRoles
