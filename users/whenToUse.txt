@@ -1,0 +1,3 @@
+get - Prove an element exist
+query - Prove an element does not exist
+find - Make sure an element eventually exists
