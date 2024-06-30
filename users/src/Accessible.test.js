@@ -19,7 +19,7 @@ test('shows an email and a search input', () => {
     render(<AccessibleNames />)
 
     const emailInput = screen.getByRole('textbox', { name: /email/i })
-    const searchInput = screen.getByRole('textbox', { name: /search/i })
+    const searchInput = screen.getByRole('textbox', { name: /search/i })        
 
     expect(emailInput).toBeInTheDocument();
     expect(searchInput).toBeInTheDocument();
