@@ -31,5 +31,5 @@ test('test svg buttons show', () => {
     const signOutButton = screen.getByRole("button", { name: /sign out/i })  
 
     expect(signInButton).toBeInTheDocument();
-    expect(signOutButton).toBeInTheDocument();
+    expect(signOutButton).toBeInTheDocument();   
 })
