@@ -28,7 +28,7 @@ test('shows an email and a search input', () => {
 test('test svg buttons show', () => {
     render(<AccessibleNames />)
     const signInButton = screen.getByRole("button", { name: /sign in/i })
-    const signOutButton = screen.getByRole("button", { name: /sign out/i })
+    const signOutButton = screen.getByRole("button", { name: /sign out/i })  
 
     expect(signInButton).toBeInTheDocument();
     expect(signOutButton).toBeInTheDocument();
