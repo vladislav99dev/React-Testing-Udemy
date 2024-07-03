@@ -31,6 +31,7 @@ test("getBy,queryBy,findBy when finding one element", async () => {
   expect(screen.queryByRole("list")).toBeInTheDocument();
   expect(await screen.findByRole("list")).toBeInTheDocument();
 });
+
 test("getBy,queryBy,findBy when finding > 1 elements", async () => {
   render(<QueryFnBehaiviors />);
 
@@ -48,4 +49,12 @@ test("getBy,queryBy,findBy when finding > 1 elements", async () => {
   }
 
   expect(errorThrown).toEqual(true);
+});
+
+test("asynchronous test", async () => {
+  render(<QueryFnBehaiviors />);
+
+  const personData = await screen.findByRole("listitem", { name: /vladi/i });
+
+  expect(personData).toBeInTheDocument();
 });
